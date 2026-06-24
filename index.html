@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple Anemone</title>
+
+<style>
+    .carousel{
+position:relative;
+max-width:900px;
+margin:auto;
+}
+
+.slide{
+display:none;
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.slide.active{
+display:block;
+}
+
+.prev,
+.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+padding:15px;
+cursor:pointer;
+font-size:24px;
+border-radius:50%;
+}
+
+.prev{
+left:15px;
+}
+
+.next{
+right:15px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7ff;
+color:#333;
+}
+
+header{
+height:100vh;
+background:linear-gradient(135deg,#6a11cb,#2575fc);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.logo{
+width:180px;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+header h1{
+font-size:4rem;
+margin-bottom:10px;
+}
+
+header p{
+font-size:1.3rem;
+max-width:700px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:white;
+color:#6a11cb;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+color:#6a11cb;
+margin-bottom:50px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.stat-card h2{
+font-size:3rem;
+color:#6a11cb;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.president{
+background:white;
+padding:40px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.president h2{
+color:#6a11cb;
+}
+
+.floor-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.floor-card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.floor-card h3{
+color:#6a11cb;
+margin-bottom:15px;
+}
+
+.floor-card li{
+list-style:none;
+padding:6px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.feature h3{
+margin-bottom:10px;
+color:#6a11cb;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<!-- REPLACE logo.png WITH YOUR LOGO FILE -->
+<img src="logo.png" class="logo">
+
+<h1>APPLE ANEMONE</h1>
+
+<p>
+A vibrant residential community where comfort, celebration and togetherness come alive.
+</p>
+
+<a href="#about" class="btn">Explore Community</a>
+
+</header>
+
+<section id="about">
+
+<h2 class="section-title">Community Overview</h2>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2>4</h2>
+<p>Floors</p>
+</div>
+
+<div class="stat-card">
+<h2>16</h2>
+<p>Flats</p>
+</div>
+
+<div class="stat-card">
+<h2>16</h2>
+<p>Parking Spaces</p>
+</div>
+
+<div class="stat-card">
+<h2>1</h2>
+<p>Large Terrace</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">President</h2>
+
+<div class="president">
+<h2>ABHISHEK MATHUR</h2>
+<p>President, Apple Anemone Residents Association</p>
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Pictures of Building</h2>
+
+<div class="gallery">
+
+<!-- SECOND PHOTO -->
+<img src="building1.jpg">
+
+<!-- FOURTH PHOTO -->
+<img src="building2.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Flat Directory</h2>
+
+<div class="floor-grid">
+
+<div class="floor-card">
+<h3>First Floor</h3>
+<ul>
+<li>101</li>
+<li>102</li>
+<li>103</li>
+<li>104</li>
+</ul>
+</div>
+
+<div class="floor-card">
+<h3>Second Floor</h3>
+<ul>
+<li>201</li>
+<li>202</li>
+<li>203</li>
+<li>204</li>
+</ul>
+</div>
+
+<div class="floor-card">
+<h3>Third Floor</h3>
+<ul>
+<li>301</li>
+<li>302</li>
+<li>303</li>
+<li>304</li>
+</ul>
+</div>
+
+<div class="floor-card">
+<h3>Fourth Floor</h3>
+<ul>
+<li>401</li>
+<li>402</li>
+<li>403</li>
+<li>404</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Terrace & Facilities</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>🌿 Rooftop Green Space</h3>
+<p>Residents can grow plants and create a beautiful terrace garden.</p>
+</div>
+
+<div class="feature">
+<h3>🚶 Walking Area</h3>
+<p>Enjoy peaceful morning and evening walks on the terrace.</p>
+</div>
+
+<div class="feature">
+<h3>🎉 Festival Celebrations</h3>
+<p>Celebrate Diwali, Holi, New Year and many more events together.</p>
+</div>
+
+<div class="feature">
+<h3>🚗 Dedicated Parking</h3>
+<p>Every flat has its own allotted parking space.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Celebration of Festivals</h2>
+
+<div class="carousel">
+
+    <img class="slide active" src="festival.jpg" alt="Festival Celebration">
+
+    <img class="slide" src="building1.jpg" alt="Diwali Celebration">
+
+    <img class="slide" src="building2.jpg" alt="Community Event">
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>APPLE ANEMONE</h2>
+
+<p>Where Homes Meet Happiness</p>
+
+<p style="margin-top:10px;">
+© 2026 Apple Anemone Residential Community
+</p>
+
+</footer>
+<script>
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index){
+
+slides.forEach(slide => slide.classList.remove("active"));
+
+currentSlide = (index + slides.length) % slides.length;
+
+slides[currentSlide].classList.add("active");
+
+}
+
+function changeSlide(direction){
+
+showSlide(currentSlide + direction);
+
+}
+
+setInterval(() => {
+
+changeSlide(1);
+
+}, 3000);
+
+</script>
+</body>
+</html>
+
