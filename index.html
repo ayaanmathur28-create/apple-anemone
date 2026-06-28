@@ -7,6 +7,7 @@
 <title>Apple Anemone</title>
 
 <style>
+    
     .carousel{
 position:relative;
 max-width:900px;
@@ -212,12 +213,88 @@ color:white;
 text-align:center;
 padding:30px;
 }
+/* ================= NAVIGATION BAR ================= */
 
+html{
+    scroll-behavior:smooth;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:75px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 60px;
+
+    background:linear-gradient(90deg,#6a11cb,#2575fc);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+
+    z-index:9999;
+}
+
+.nav-logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+    margin:0;
+    padding:0;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ffd700;
+}
+
+/* Push page below navbar */
+header{
+    margin-top:75px;
+}
 </style>
 </head>
 
 <body>
+<nav class="navbar">
 
+    <div class="nav-logo">
+        🍎 Apple Anemone
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#why-choose">Why Choose Us</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#nearby">Nearby Places</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#location">Location</a></li>
+    </ul>
+
+</nav>
 <header>
 
 <!-- REPLACE logo.png WITH YOUR LOGO FILE -->
@@ -275,7 +352,60 @@ A vibrant residential community where comfort, celebration and togetherness come
 </section>
 
 <section>
+<!-- Why Choose Apple Anemone -->
+<section id="why-choose">
 
+<h2 class="section-title">⭐ Why Choose Apple Anemone?</h2>
+
+<p style="text-align:center;max-width:850px;margin:0 auto 40px;color:#555;font-size:18px;">
+Apple Anemone is a modern residential community designed to offer comfort, convenience, security, and a friendly environment for every family.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<h3>🛡️ Safe & Secure Community</h3>
+<p>24×7 security helps provide a safe and peaceful environment for all residents.</p>
+</div>
+
+<div class="feature">
+<h3>🛗 Lift Access</h3>
+<p>A modern lift provides convenient access from the Ground Floor to the Fourth Floor.</p>
+</div>
+
+<div class="feature">
+<h3>🚗 Dedicated Parking</h3>
+<p>Every apartment has its own allotted parking space for convenience.</p>
+</div>
+
+<div class="feature">
+<h3>🌿 Spacious Terrace</h3>
+<p>A large terrace offers space for walking, gardening, relaxing and celebrating festivals together.</p>
+</div>
+
+<div class="feature">
+<h3>🎉 Community Celebrations</h3>
+<p>Residents come together to celebrate festivals like Diwali, Holi, Independence Day and many other special occasions.</p>
+</div>
+
+<div class="feature">
+<h3>📍 Prime Location</h3>
+<p>Located close to schools, hospitals, shopping centres, temples, sports facilities and other essential services.</p>
+</div>
+
+<div class="feature">
+<h3>👨‍👩‍👧‍👦 Family-Friendly Environment</h3>
+<p>A welcoming community where families, children and senior citizens can enjoy a comfortable lifestyle.</p>
+</div>
+
+<div class="feature">
+<h3>🏡 Well-Maintained Premises</h3>
+<p>Regular maintenance and cleanliness help keep the society attractive, organized and pleasant for everyone.</p>
+</div>
+
+</div>
+
+</section>
 <h2 class="section-title">Pictures of Building</h2>
 
 <div class="gallery">
@@ -388,7 +518,265 @@ A vibrant residential community where comfort, celebration and togetherness come
 </div>
 
 </section>
+<!-- Amenities Section -->
+<section id="amenities">
+    <h2 class="section-title">🏡 Amenities</h2>
 
+    <div class="features">
+
+        <div class="feature">
+            <h3>🛡️ 24 × 7 Security</h3>
+            <p>Professional security guards and CCTV surveillance ensure the safety of all residents.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🛗 High-Speed Lift</h3>
+            <p>Modern lift facility available from Ground Floor to Fourth Floor.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🚗 Basement Parking</h3>
+            <p>Safe and spacious parking area for residents and visitors.</p>
+        </div>
+
+        <div class="feature">
+            <h3>⚡ Power Backup</h3>
+            <p>Power backup for lifts and common areas during electricity outages.</p>
+        </div>
+
+        <div class="feature">
+            <h3>💧 24 × 7 Water Supply</h3>
+            <p>Continuous clean water supply for all apartments.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🧹 Housekeeping</h3>
+            <p>Regular cleaning and maintenance of all common areas.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🗑️ Waste Management</h3>
+            <p>Daily garbage collection with proper waste disposal facilities.</p>
+        </div>
+
+        <div class="feature">
+            <h3>📦 Delivery Support</h3>
+            <p>Convenient access for courier and food delivery services.</p>
+        </div>
+
+    </div>
+</section>
+<!-- Nearby Places -->
+<section id="nearby">
+
+<h2 class="section-title">📍 Nearby Places</h2>
+
+<p style="text-align:center;max-width:800px;margin:0 auto 40px;color:#555;font-size:18px;">
+Apple Anemone enjoys a prime location with schools, hospitals, shopping destinations,
+places of worship and sports facilities just a short distance away.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<h3>🏫 Jayshree Periwal High School</h3>
+<p>One of Jaipur's reputed schools, located conveniently near Apple Anemone.</p>
+</div>
+
+<div class="feature">
+<h3>🏥 Shalby Hospital</h3>
+<p>A multi-speciality hospital offering quality healthcare services nearby.</p>
+</div>
+
+<div class="feature">
+<h3>🩺 Manav Urology Hospital</h3>
+<p>Specialized healthcare services with easy access for residents.</p>
+</div>
+
+<div class="feature">
+<h3>🛒 One Stop Grocery Store</h3>
+<p>Convenient shopping for daily groceries and household essentials.</p>
+</div>
+
+<div class="feature">
+<h3>🛕 Shani Mandir</h3>
+<p>A peaceful temple located close to the community for worship and festivals.</p>
+</div>
+
+<div class="feature">
+<h3>🛍️ Mall of Jaipur</h3>
+<p>Enjoy shopping, dining and entertainment just a short drive away.</p>
+</div>
+
+<div class="feature">
+<h3>🏟️ Pratap Yadav Stadium</h3>
+<p>A nearby sports facility for cricket, football and other recreational activities.</p>
+</div>
+
+<div class="feature">
+<h3>⛽ IndianOil Petrol Pump</h3>
+<p>A nearby fuel station offering petrol, diesel and essential vehicle services.</p>
+</div>
+
+<div class="feature">
+<h3>🚖 Excellent Connectivity</h3>
+<p>Well-connected roads provide quick access to major areas of Jaipur.</p>
+</div>
+
+</div>
+
+</section>
+<!-- Society Rules & Guidelines -->
+<section id="rules">
+
+<h2 class="section-title">📋 Society Rules & Guidelines</h2>
+
+<p style="text-align:center;max-width:850px;margin:0 auto 40px;color:#555;font-size:18px;">
+To maintain a safe, clean and pleasant environment for everyone, all residents and visitors are requested to follow these community guidelines.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<h3>🚗 Parking Rules</h3>
+<p>Please park your vehicle only in your allotted parking space and avoid blocking driveways or common areas.</p>
+</div>
+
+<div class="feature">
+<h3>🗑️ Cleanliness</h3>
+<p>Help keep the society clean by disposing of waste in the designated bins and maintaining hygiene in common areas.</p>
+</div>
+
+<div class="feature">
+<h3>🐶 Pet Guidelines</h3>
+<p>Pets are welcome. Owners are requested to supervise their pets and keep all common areas clean.</p>
+</div>
+
+<div class="feature">
+<h3>🔥 Fire Safety</h3>
+<p>Please follow all fire safety instructions and never block emergency exits or fire equipment.</p>
+</div>
+
+<div class="feature">
+<h3>👥 Visitor Entry</h3>
+<p>All visitors are requested to cooperate with the security team and follow the visitor entry procedures.</p>
+</div>
+
+<div class="feature">
+<h3>🎉 Common Area Usage</h3>
+<p>Residents are requested to use common areas responsibly and help maintain shared facilities for everyone's benefit.</p>
+</div>
+
+<div class="feature">
+<h3>🛗 Lift Usage</h3>
+<p>Please use the lift responsibly and avoid exceeding the maximum capacity for everyone's safety.</p>
+</div>
+
+<div class="feature">
+<h3>🤝 Respect the Community</h3>
+<p>Treat fellow residents, staff members and community property with respect to maintain a friendly neighbourhood.</p>
+</div>
+
+</div>
+
+</section>
+<!-- Emergency Contacts -->
+
+<section id="emergency">
+
+<h2 class="section-title">🚨 Emergency Contacts</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>👮 Police</h3>
+<h2>112</h2>
+<p>National Emergency Helpline</p>
+</div>
+
+<div class="feature">
+<h3>🚑 Ambulance</h3>
+<h2>108</h2>
+<p>Medical Emergency</p>
+</div>
+
+<div class="feature">
+<h3>🚒 Fire Brigade</h3>
+<h2>101</h2>
+<p>Fire Emergency</p>
+</div>
+
+</section>
+<!-- Location Section -->
+ <hr style="margin:60px 0; border:none; border-top:2px solid #ddd;">
+
+<section id="feedback" style="padding:60px 20px; background:#f8f8f8; text-align:center;">
+
+    <h2 class="section-title">📝 Resident Feedback</h2>
+
+    <p style="font-size:18px;color:#555;">
+        We value your feedback. Please share your suggestions,
+        complaints, or appreciation to help make Apple Anemone
+        an even better place to live.
+    </p>
+
+    <form action="https://formsubmit.co/ayaanmathur28@gmail.com" method="POST" style="max-width:600px;margin:auto;">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            style="width:100%;padding:15px;margin-bottom:20px;border-radius:10px;border:1px solid #ccc;">
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            style="width:100%;padding:15px;margin-bottom:20px;border-radius:10px;border:1px solid #ccc;">
+
+        <textarea
+            name="message"
+            rows="6"
+            placeholder="Write your feedback..."
+            required
+            style="width:100%;padding:15px;margin-bottom:20px;border-radius:10px;border:1px solid #ccc;"></textarea>
+
+        <button
+            type="submit"
+            class="btn"
+            style="border:none;cursor:pointer;font-size:18px;">
+            📩 Submit Feedback
+        </button>
+
+    </form>
+
+</section>
+<section id="location" style="padding:60px 20px; background:#f8f8f8; text-align:center;">
+
+    <h2 class="section-title">📍 Our Location</h2>
+
+    <p style="font-size:18px; color:#555;">
+        Visit Apple Anemone Residential Community
+    </p>
+
+    <a href=https://maps.app.goo.gl/VBtbo696voUGP6HM6
+       target="_blank"
+       style="
+            display:inline-block;
+            margin-top:20px;
+            padding:15px 30px;
+            background:#6a11cb;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            font-size:18px;
+            font-weight:bold;">
+        📍 Open in Google Maps
+    </a>
+
+</section>
 <footer>
 
 <h2>APPLE ANEMONE</h2>
@@ -429,6 +817,7 @@ changeSlide(1);
 }, 3000);
 
 </script>
+
 </body>
 </html>
 
